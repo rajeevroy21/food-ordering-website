@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App - Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('food-reg.jpg'); /* Replace with the correct path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px); /* Slight blur effect on background */
+        }
+        .registration-container {
+            background-color: rgba(255, 255, 255, 0.85); /* Slight transparency for a modern feel */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            z-index: 1;
+        }
+        .registration-container h2 {
+            text-align: center;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .registration-container input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ced4da;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .registration-container input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .registration-container button {
+            width: 100%;
+            padding: 14px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .registration-container button:hover {
+            background-color: #0056b3;
+        }
+        .registration-container p {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+        .registration-container p a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .registration-container p a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <h2>Create Your Account</h2>
+        <form action="submit_registration.php" method="post">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="address" placeholder="Delivery Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Existing account? <a href="index.html">Log in</a></p>
+
+    </div>
+
+</body>
+</html>
